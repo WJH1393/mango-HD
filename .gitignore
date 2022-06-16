@@ -30,9 +30,16 @@
 
 /target/
 
+*.lst
+
 mango/target/classes/application.properties
 mango/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
 mango/mango.iml
 mango/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
 mango/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
 *.original
+mango/mango.iml
+*.iml
+*.jar
+
+mango/target/mango-1.0-SNAPSHOT.jar
