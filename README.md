@@ -6,7 +6,7 @@
 令牌 token
 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
 
-需要在项目根目录下面执行如下git命令
+需要在项目根目录下面执行如下git命令  
 
 git remote set-url origin  https://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@github.com/WJH1393/mango-HD.git
 
