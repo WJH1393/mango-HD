@@ -1,0 +1,8 @@
+server:
+  port: 8001
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mango?serverTimezone=UTC
+    username: root
+    password: jinhu123
