@@ -9,6 +9,7 @@ import com.louis.http.HttpResult;
 import com.louis.page.PageRequest;
 import com.louis.utils.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -88,6 +89,7 @@ public class SysUserController {
 		return HttpResult.ok(sysUserService.findUserRoles(userId));
 	}
 
+	@PreAuthorize("hasAuthority('sys:user:view')")
 	@PostMapping(value="/findPage")
 	public HttpResult findPage(@RequestBody PageRequest pageRequest) {
 		return HttpResult.ok(sysUserService.findPage(pageRequest));
