@@ -32,7 +32,8 @@ public class SysRoleController {
 	private SysRoleService sysRoleService;
 	@Autowired
 	private SysRoleMapper sysRoleMapper;
-	
+
+	@PreAuthorize("hasAuthority('sys:role:add') AND hasAuthority('sys:role:edit')")
 	@PostMapping(value="/save")
 	public HttpResult save(@RequestBody SysRole record) {
 		SysRole role = sysRoleService.findById(record.getId());
@@ -48,11 +49,13 @@ public class SysRoleController {
 		return HttpResult.ok(sysRoleService.save(record));
 	}
 
+	@PreAuthorize("hasAuthority('sys:role:delete')")
 	@PostMapping(value="/delete")
 	public HttpResult delete(@RequestBody List<SysRole> records) {
 		return HttpResult.ok(sysRoleService.delete(records));
 	}
 
+	@PreAuthorize("hasAuthority('sys:role:view')")
 	@PostMapping(value="/findPage")
 	public HttpResult findPage(@RequestBody PageRequest pageRequest) {
 		return HttpResult.ok(sysRoleService.findPage(pageRequest));
@@ -63,12 +66,14 @@ public class SysRoleController {
 	public HttpResult findAll() {
 		return HttpResult.ok(sysRoleService.findAll());
 	}
-	
+
+	@PreAuthorize("hasAuthority('sys:role:view')")
 	@GetMapping(value="/findRoleMenus")
 	public HttpResult findRoleMenus(@RequestParam Long roleId) {
 		return HttpResult.ok(sysRoleService.findRoleMenus(roleId));
 	}
-	
+
+	@PreAuthorize("hasAuthority('sys:role:view')")
 	@PostMapping(value="/saveRoleMenus")
 	public HttpResult saveRoleMenus(@RequestBody List<SysRoleMenu> records) {
 		for(SysRoleMenu record:records) {

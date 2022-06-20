@@ -32,7 +32,8 @@ public class SysUserController {
 
 	@Autowired
 	private SysUserService sysUserService;
-	
+
+	@PreAuthorize("hasAuthority('sys:user:add') AND hasAuthority('sys:user:edit')")
 	@PostMapping(value="/save")
 	public HttpResult save(@RequestBody SysUser record) {
 		SysUser user = sysUserService.findById(record.getId());
@@ -63,6 +64,7 @@ public class SysUserController {
 		return HttpResult.ok(sysUserService.save(record));
 	}
 
+	@PreAuthorize("hasAuthority('sys:user:delete')")
 	@PostMapping(value="/delete")
 	public HttpResult delete(@RequestBody List<SysUser> records) {
 		for(SysUser record:records) {
@@ -73,17 +75,20 @@ public class SysUserController {
 		}
 		return HttpResult.ok(sysUserService.delete(records));
 	}
-	
+
+	@PreAuthorize("hasAuthority('sys:user:view')")
 	@GetMapping(value="/findByName")
 	public HttpResult findByName(@RequestParam String name) {
 		return HttpResult.ok(sysUserService.findByName(name));
 	}
-	
+
+	@PreAuthorize("hasAuthority('sys:user:view')")
 	@GetMapping(value="/findPermissions")
 	public HttpResult findPermissions(@RequestParam String name) {
 		return HttpResult.ok(sysUserService.findPermissions(name));
 	}
-	
+
+	@PreAuthorize("hasAuthority('sys:user:view')")
 	@GetMapping(value="/findUserRoles")
 	public HttpResult findUserRoles(@RequestParam Long userId) {
 		return HttpResult.ok(sysUserService.findUserRoles(userId));
@@ -94,7 +99,8 @@ public class SysUserController {
 	public HttpResult findPage(@RequestBody PageRequest pageRequest) {
 		return HttpResult.ok(sysUserService.findPage(pageRequest));
 	}
-	
+
+	@PreAuthorize("hasAuthority('sys:user:view')")
 	@PostMapping(value="/exportExcelUser")
 	public void exportExcelUser(@RequestBody PageRequest pageRequest, HttpServletResponse res) {
 		File file = sysUserService.createUserExcelFile(pageRequest);
