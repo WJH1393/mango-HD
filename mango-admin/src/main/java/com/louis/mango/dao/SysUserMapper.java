@@ -2,6 +2,8 @@ package com.louis.mango.dao;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
+
 import com.louis.mango.model.SysUser;
 
 public interface SysUserMapper {
@@ -17,9 +19,11 @@ public interface SysUserMapper {
 
     int updateByPrimaryKey(SysUser record);
     
-    /**
-     * 查询全部
-     * @return
-     */
-    List<SysUser> findAll();
+    List<SysUser> findPage();
+    
+    SysUser findByName(@Param(value="name") String name);
+    
+	List<SysUser> findPageByName(@Param(value="name") String name);
+	
+	List<SysUser> findPageByNameAndEmail(@Param(value="name") String name, @Param(value="email") String email);
 }

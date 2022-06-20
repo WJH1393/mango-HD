@@ -23,3 +23,18 @@ spring:
       pool-prepared-statements: true
       max-open-prepared-statements: 50
       max-pool-prepared-statement-per-connection-size: 20
+
+#pageHelper
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+
+params: count=countSql
+
+swagger:
+  production: false
+  basic:
+    enable: true
+    username: admin
+    password: admin
