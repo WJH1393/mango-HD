@@ -4,7 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
+@EnableDiscoveryClient
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class, scanBasePackages={"com.louis.*"})
 public class MangoApplication extends SpringBootServletInitializer {
     public static void main(String[] args) {

@@ -27,6 +27,13 @@ spring:
   application:
     name: mango-admin
 
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        serviceName: ${spring.application.name}
+
   #配置监控
   boot:
     admin:
