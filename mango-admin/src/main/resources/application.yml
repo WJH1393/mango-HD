@@ -24,6 +24,21 @@ spring:
       max-open-prepared-statements: 50
       max-pool-prepared-statement-per-connection-size: 20
 
+  application:
+    name: mango-admin
+
+  #配置监控
+  boot:
+    admin:
+      client:
+        url: "http://localhost:8000"
+#开放健康检查接口 * 表示全部接口
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
 #pageHelper
 pagehelper:
   helper-dialect: mysql
@@ -38,3 +53,5 @@ swagger:
     enable: true
     username: admin
     password: admin
+
+
