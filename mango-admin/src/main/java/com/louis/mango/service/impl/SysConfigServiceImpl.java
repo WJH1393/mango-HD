@@ -50,7 +50,7 @@ public class SysConfigServiceImpl  implements SysConfigService {
 		if(label != null) {
 			return MybatisPageHelper.findPage(pageRequest, sysConfigMapper, "findPageByLabel", label);
 		}
-		return MybatisPageHelper.findPage(pageRequest, sysConfigMapper);
+		return MybatisPageHelper.findPage(pageRequest, sysConfigMapper,"findPage");
 	}
 
 	@Override

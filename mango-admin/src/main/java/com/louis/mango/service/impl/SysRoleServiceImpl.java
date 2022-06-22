@@ -60,7 +60,7 @@ public class SysRoleServiceImpl  implements SysRoleService {
 		if(label != null) {
 			return MybatisPageHelper.findPage(pageRequest, sysRoleMapper, "findPageByName", label);
 		}
-		return MybatisPageHelper.findPage(pageRequest, sysRoleMapper);
+		return MybatisPageHelper.findPage(pageRequest, sysRoleMapper,"findPage");
 	}
 
 	@Override

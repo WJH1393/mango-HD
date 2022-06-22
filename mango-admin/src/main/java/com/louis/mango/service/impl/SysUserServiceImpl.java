@@ -106,7 +106,7 @@ public class SysUserServiceImpl  implements SysUserService {
 				pageResult = MybatisPageHelper.findPage(pageRequest, sysUserMapper, "findPageByName", name);
 			}
 		} else {
-			pageResult = MybatisPageHelper.findPage(pageRequest, sysUserMapper);
+			pageResult = MybatisPageHelper.findPage(pageRequest, sysUserMapper,"findPage");
 		}
 		// 加载用户角色信息
 		findUserRoles(pageResult);

@@ -54,7 +54,7 @@ public class SysLoginLogServiceImpl  implements SysLoginLogService {
 		if(status != null) {
 			return MybatisPageHelper.findPage(pageRequest, sysLoginLogMapper, "findPageByStatus", status);
 		}
-		return MybatisPageHelper.findPage(pageRequest, sysLoginLogMapper);
+		return MybatisPageHelper.findPage(pageRequest, sysLoginLogMapper,"findPage");
 	}
 	
 }

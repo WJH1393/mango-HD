@@ -50,7 +50,7 @@ public class SysDictServiceImpl  implements SysDictService {
 		if(label != null) {
 			return MybatisPageHelper.findPage(pageRequest, sysDictMapper, "findPageByLabel", label);
 		}
-		return MybatisPageHelper.findPage(pageRequest, sysDictMapper);
+		return MybatisPageHelper.findPage(pageRequest, sysDictMapper,"findPage");
 	}
 
 	@Override
