@@ -11,7 +11,7 @@
     <groupId>com.louis</groupId>
     <artifactId>mango-admin</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>mango</name>
+    <name>mango-admin</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -112,6 +112,8 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+
 
     <build>
         <plugins>

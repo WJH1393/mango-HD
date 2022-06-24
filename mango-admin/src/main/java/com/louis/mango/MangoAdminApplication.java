@@ -7,9 +7,9 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @EnableDiscoveryClient
-@SpringBootApplication(exclude = DataSourceAutoConfiguration.class, scanBasePackages={"com.louis.*"})
-public class MangoApplication extends SpringBootServletInitializer {
+@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
+public class MangoAdminApplication extends SpringBootServletInitializer {
     public static void main(String[] args) {
-        SpringApplication.run(MangoApplication.class,args);
+        SpringApplication.run(MangoAdminApplication.class,args);
     }
 }

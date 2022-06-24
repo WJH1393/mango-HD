@@ -47,3 +47,4 @@ mango-monitor/target/classes/application.yml
 mango-monitor/target/maven-archiver/pom.properties
 mango-admin/target/classes/application.yml
 mango-admin/target/classes/application.yml
+mango-producer2/target/maven-archiver/pom.properties
