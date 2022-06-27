@@ -50,3 +50,5 @@ mango-admin/target/classes/application.yml
 mango-producer2/target/maven-archiver/pom.properties
 mango-consumer/target/classes/application.yml
 mango-consumer/target/maven-archiver/pom.properties
+mango-producer/target/classes/application.yml
+mango-producer2/target/classes/application.yml

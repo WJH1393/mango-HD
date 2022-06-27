@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ControllerTest2 {
-    @RequestMapping("/test2")
+    @RequestMapping("/test")
     public String test(){
         return "this is producer2 !";
     }

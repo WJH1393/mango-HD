@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: mango-producer1
+    name: mango-producer
   boot:
     admin:
       client:
