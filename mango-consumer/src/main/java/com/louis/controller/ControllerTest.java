@@ -49,4 +49,9 @@ public class ControllerTest {
         return mangoProducerService.test();
     }
 
+    @RequestMapping("call3")
+    public String test2(){
+        return mangoProducerService.test();
+    }
+
 }
