@@ -35,7 +35,7 @@ public class ControllerTest {
      * 远程调用第三方的方法
      * @return
      */
-    @RequestMapping("/call")
+    @RequestMapping("/ribbon/call")
     public String test(){
         //获取提供方服务
         ServiceInstance service = loadBalancerClient.choose("mango-producer");
@@ -44,7 +44,7 @@ public class ControllerTest {
         return result;
     }
 
-    @RequestMapping("call2")
+    @RequestMapping("/feign/call2")
     public String test1(){
         return mangoProducerService.test();
     }
