@@ -1,0 +1,27 @@
+server:
+  port: 8010
+
+spring:
+  application:
+    name: mango-zuul
+  #配置系统监控
+  boot:
+    admin:
+      client:
+        url: "http://localhost:8000"
+  #配置注册中心
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        serviceName: ${spring.application.name}
+#配置zuul相关的配置
+#zuul:
+#  routes:
+#    ribbon:
+#      path: /ribbon/**
+#      serviceId: mango-consumer
+#    feign:
+#      path: /feign/**
+#      servicedId: mango-consumer

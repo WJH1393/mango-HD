@@ -50,7 +50,7 @@ public class SysMenuServiceImpl implements SysMenuService {
 
 	@Override
 	public PageResult findPage(PageRequest pageRequest) {
-		return MybatisPageHelper.findPage(pageRequest, sysMenuMapper);
+		return MybatisPageHelper.findPage(pageRequest, sysMenuMapper,"findPage");
 	}
 	
 	@Override

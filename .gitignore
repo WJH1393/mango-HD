@@ -43,3 +43,15 @@ mango/mango.iml
 *.jar
 
 mango/target/mango-1.0-SNAPSHOT.jar
+mango-monitor/target/classes/application.yml
+mango-monitor/target/maven-archiver/pom.properties
+mango-admin/target/classes/application.yml
+mango-admin/target/classes/application.yml
+mango-producer2/target/maven-archiver/pom.properties
+mango-consumer/target/classes/application.yml
+mango-consumer/target/maven-archiver/pom.properties
+mango-producer/target/classes/application.yml
+mango-producer2/target/classes/application.yml
+mango-hystrix/target/maven-archiver/pom.properties
+mango-producer/target/classes/application.yml
+mango-producer/target/classes/application.yml

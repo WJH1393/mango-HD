@@ -46,7 +46,7 @@ public class SysDeptServiceImpl implements SysDeptService {
 
 	@Override
 	public PageResult findPage(PageRequest pageRequest) {
-		return MybatisPageHelper.findPage(pageRequest, sysDeptMapper);
+		return MybatisPageHelper.findPage(pageRequest, sysDeptMapper,"findPage");
 	}
 
 	@Override
