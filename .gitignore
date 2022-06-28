@@ -55,3 +55,7 @@ mango-producer2/target/classes/application.yml
 mango-hystrix/target/maven-archiver/pom.properties
 mango-producer/target/classes/application.yml
 mango-producer/target/classes/application.yml
+mango-config/target/classes/application.yml
+mango-config/target/maven-archiver/pom.properties
+mango-spring-config/target/maven-archiver/pom.properties
+mango-spring-config/target/classes/application.yml
