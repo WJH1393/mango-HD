@@ -1,6 +1,8 @@
 server:
   port: 8020
 spring:
+#  profiles:
+#    active: native
   application:
     name: mango-spring-config
   cloud:
@@ -10,11 +12,11 @@ spring:
       discovery:
         serviceName: ${spring.application.name}	# 注册到consul的服务名称
     config:
-      label: 2022062020220624  # git仓库分支
+      label: 0628  # git仓库分支
       server:
         git:
-          uri: https://github.com/WJH1393/mango-HD.git  # 配置git仓库的地址
-          search-paths: config-repo  # git仓库地址下的相对地址，可以配置多个，用,分割。
+          uri: https://github.com/WJH1393/gitTest.git  # 配置git仓库的地址
+          search-paths:   # git仓库地址下的相对地址，可以配置多个，用,分割。
           username: WJH1393  # git仓库的账号
           password: jinhu5722181  # git仓库的密码
 management:
