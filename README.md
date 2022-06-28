@@ -25,3 +25,5 @@ REPO      mango-HD
 1、熔断器 集群 turbine.stream方式 未实现 目前只支持单体
 
 2、zuul网关实现熔断器 未生效
+
+3、分布式配置中心 未实现功能
